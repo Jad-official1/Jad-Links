@@ -1,39 +1,137 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-<title>ZRXBLOX</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقعي الشخصي - الروابط</title>
+    <!-- استدعاء مكتبة الأيقونات Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Script Config / Style Settings */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-<!-- تحميل المكتبات المطلوبة -->
-<script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+        body {
+            /* تغيير الثيم للأزرق */
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #0f172a 100%);
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
 
-<style>
-*{box-sizing:border-box}
-html,body{margin:0;width:100%;height:100%;font-family:Arial,sans-serif;background:#f2f2f2;color:#222;}
-button,input,select{font-family:Arial,sans-serif;}
-button{border:0;cursor:pointer;}
-.hidden{display:none!important;}
+        .container {
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
 
-#splash{position:fixed;inset:0;background:#111;color:white;display:flex;align-items:center;justify-content:center;z-index:99999;animation:splash 4s forwards;}
-.logo{font-size:55px;font-weight:900;letter-spacing:4px;}
-@keyframes splash{0%,85%{opacity:1;visibility:visible}100%{opacity:0;visibility:hidden}}
+        h1 {
+            margin-bottom: 30px;
+            font-size: 24px;
+            color: #f8fafc;
+        }
 
-.auth{min-height:100vh;display:flex;align-items:center;justify-content:center;}
-.auth-box{width:390px;max-width:92%;background:white;border-radius:18px;padding:30px;box-shadow:0 10px 35px #0002;}
-.auth-logo{text-align:center;font-size:35px;font-weight:900;}
-.subtitle{text-align:center;color:#777;margin:10px 0 25px;}
-input,select{width:100%;padding:14px;margin:6px 0;border:1px solid #ccc;border-radius:9px;outline:none;font-size:16px;background:white;}
-.auth button{width:100%;padding:14px;margin-top:10px;border-radius:9px;background:#111;color:white;font-size:16px;font-weight:bold;}
-.auth .light{background:#eee;color:#222;}
-.message{text-align:center;min-height:25px;margin-top:10px;}
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
 
-/* نافذة اختيار الجهاز */
-#deviceModal{position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:99999;display:flex;align-items:center;justify-content:center;padding:15px;}
-.deviceBox{width:400px;max-width:100%;background:white;border-radius:20px;padding:30px;text-align:center;box-shadow:0 15px 50px #0006;}
-.deviceBox h2{color:#111;margin-bottom:10px;}
-.deviceBox p{color:#666;margin-bottom:20px;}
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 15px 25px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 14px rgba(0, 0, 0, 0.4);
+        }
+
+        .btn i {
+            font-size: 24px;
+        }
+
+        .youtube {
+            background-color: #FF0000;
+        }
+
+        .discord {
+            background-color: #5865F2;
+        }
+
+        .instagram {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        }
+
+        /* ستلايل أزرار روبلوكس وتيك توك */
+        .roblox {
+            background-color: #000000;
+            border: 1px solid #00a2ff;
+        }
+
+        .tiktok {
+            background-color: #000000;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>حساباتي على التواصل الاجتماعي</h1>
+        
+        <div class="links-container">
+            <!-- الزر الأول: يوتيوب -->
+            <a href="https://youtube.com/@alkhalil7_7?si=E6ET7qVWd-1XWMe4" target="_blank" class="btn youtube">
+                <i class="fa-brands fa-youtube"></i>
+                <span>يوتيوب</span>
+            </a>
+
+            <!-- الزر الثاني: ديسكورد -->
+            <a href="https://discord.gg/tdNPhsXC7" target="_blank" class="btn discord">
+                <i class="fa-brands fa-discord"></i>
+                <span>ديسكورد</span>
+            </a>
+
+            <!-- الزر الثالث: انستجرام -->
+            <a href="https://www.instagram.com/alk_om99?stkn=YjFqNDBxcm05N2gy" target="_blank" class="btn instagram">
+                <i class="fa-brands fa-instagram"></i>
+                <span>انستجرام</span>
+            </a>
+
+            <!-- الزر الرابع: تيك توك -->
+            <a href="YOUR_TIKTOK_URL_HERE" target="_blank" class="btn tiktok">
+                <i class="fa-brands fa-tiktok"></i>
+                <span>تيك توك</span>
+            </a>
+
+            <!-- الزر الخامس: روبلوكس -->
+            <a href="YOUR_ROBLOX_URL_HERE" target="_blank" class="btn roblox">
+                <i class="fa-solid fa-gamepad"></i>
+                <span>روبلوكس</span>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
 .deviceBtn{width:100%;padding:15px;margin:10px 0;border-radius:12px;background:#111;color:white;font-size:18px;font-weight:bold;display:flex;align-items:center;justify-content:center;gap:10px;transition:0.2s;}
 .deviceBtn:hover{background:#333;}
 
